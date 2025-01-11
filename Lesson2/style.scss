@@ -1,0 +1,45 @@
+ * {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+ }
+.box {
+    background-color: rgb(206, 158, 94);
+    
+    &__title {
+        color: white;
+    }
+
+    &__text {
+        color: rgb(45, 226, 226);
+    }
+
+    &__square {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(151, 160, 24);
+    }
+}
+
+.boxe {
+    width: 300px;
+    background-color: rgb(209, 122, 243);
+
+
+    &__title {
+        color: black;
+        font-weight: 600;
+       
+    }
+
+    &__el {
+        display:grid;
+        grid-template-columns:repeat(4, 1fr) ;
+    }
+
+    &__text {
+        background-color: rgb(115, 80, 145);
+        color: white;
+        text-transform: capitalize;
+    }
+}
