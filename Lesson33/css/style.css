@@ -1,0 +1,29 @@
+.text__1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  font-size: 20px;
+  line-height: 30px;
+  font-style: italic;
+}
+
+.text__2 {
+  font-family: "Open Sans", serif;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.text__3 {
+  font-family: "Open Sans", serif;
+  text-transform: uppercase;
+}
+
+.text__4 {
+  color: rgb(97, 37, 177);
+  word-spacing: 30px;
+}
+
+.text__5 {
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-decoration-style: double;
+}/*# sourceMappingURL=style.css.map */
