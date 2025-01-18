@@ -64,7 +64,7 @@ body {
 
 .banner {
   position: relative;
-  background-image: url("/pictures/Rectangle 1.png");
+  background-image: url("../pictures/Rectangle 1.png");
   background-size: cover;
   background-position: center;
   padding: 120px 0;
