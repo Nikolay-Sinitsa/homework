@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Myflora";
+    src: local("Myflora Personal Use"), local("MyfloraPersonalUse"),
+      url("../fonts/MyfloraPersonalUse.woff2") format("woff2"),
+      url("../fonts/MyfloraPersonalUse.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
