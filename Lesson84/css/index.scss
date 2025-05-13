@@ -1,0 +1,104 @@
+.block {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // width: 320px;
+  text-align: center;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img{
+    width: 1200px;
+    height: 500px;
+  }
+
+
+  &__text {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+
+    &--animated {
+      background: linear-gradient(90deg, #ffcc00, #ff6699);
+      
+      .text-inner {
+        display: inline-block;
+        animation: typing 3s steps(20, end) forwards;
+        overflow: hidden;
+        width: 0;
+        opacity: 1;
+      }
+    }
+    
+    &--bounce {
+      background: linear-gradient(90deg, #66ccff, #ffcc66);
+      animation: bounce 1s infinite;
+
+      &:hover {
+        background: linear-gradient(90deg, #66ccff, #33ccff);
+      }
+    }
+
+    &--wave {
+      background: linear-gradient(90deg, #ff6699, #ffcc00);
+      animation: wave 1s infinite;
+
+      &:hover {
+        background: linear-gradient(90deg, #ff6699, #ff3366);
+      }
+    }
+  }
+}
+
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
