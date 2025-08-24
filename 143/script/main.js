@@ -92,10 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 closeAccordeonsInBlock(parentAccordeonBlock);
 
                 contentElement.classList.add("open");
-                contentElement.style.cssText = `max-height:${contentElement.scrollHeight + 40}px;padding:0px 30px 40px 30px;margin-top:-20px;opacity:1;visibility:visible;`;
+                contentElement.style.cssText = `max-height:${contentElement.scrollHeight + 100}px;padding:0px 30px 40px 30px;margin-top:-20px;opacity:1;visibility:visible;`;
                 imageElement.classList.add("active");
                 if (arrowIcon) arrowIcon.classList.add("rotated");
             }
         });
     });
 });
+
