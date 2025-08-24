@@ -652,18 +652,19 @@
   display: flex;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease, margin-top 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.9s ease, padding 0.9s ease, margin-top 0.9s ease;
   padding: 0;
   margin-top: 0;
   opacity: 0;
   visibility: hidden;
 }
 .accordeon__content.open {
-  max-height: 1000px;
-  padding: 20px 30px 40px;
+  padding: 0px 30px 40px;
   margin-top: -20px;
   opacity: 1;
   visibility: visible;
+  max-height: none !important;
+  overflow: visible;
 }
 .accordeon__content-theory {
   max-width: 507px;
@@ -1441,9 +1442,10 @@
     gap: 15px;
   }
 }
-.accordeon__content.open {
-  max-height: none !important;
-  overflow: visible;
+@media (max-width: 661px) {
+  .accordeon__content.open {
+    padding: 20px 30px 20px;
+  }
 }
 @media (max-width: 700px) {
   .accordeon__content {
@@ -1485,7 +1487,6 @@
 @media (max-width: 900px) {
   .accordeon__button {
     padding: 17px 30px;
-    margin-bottom: 7px;
   }
 }
 @media (max-width: 670px) {

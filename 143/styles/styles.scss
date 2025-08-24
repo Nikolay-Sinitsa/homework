@@ -711,19 +711,21 @@
     display: flex;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease,
-      margin-top 0.5s ease;
+    transition: max-height 0.5s ease, opacity 0.9s ease, padding 0.9s ease,
+      margin-top 0.9s ease;
     padding: 0;
     margin-top: 0;
     opacity: 0;
     visibility: hidden;
 
     &.open {
-      max-height: 1000px;
-      padding: 20px 30px 40px;
+      // max-height: 1000px;
+      padding: 0px 30px 40px;
       margin-top: -20px;
       opacity: 1;
       visibility: visible;
+      max-height: none !important;
+      overflow: visible;
     }
 
     &-theory {
@@ -1533,8 +1535,9 @@
 
   &__content {
     &.open {
-      max-height: none !important;
-      overflow: visible;
+      @media (max-width: 661px) {
+        padding: 20px 30px 20px;
+      }
     }
     @media (max-width: 700px) {
       gap: 20px;
@@ -1573,7 +1576,7 @@
   &__button {
     @media (max-width: 900px) {
       padding: 17px 30px;
-      margin-bottom: 7px;
+      // margin-bottom: 7px;
     }
     @media (max-width: 670px) {
       padding: 12px 15px;
