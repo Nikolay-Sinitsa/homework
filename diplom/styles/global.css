@@ -1,0 +1,14 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Readex Pro", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
