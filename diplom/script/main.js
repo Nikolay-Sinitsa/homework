@@ -1,6 +1,8 @@
 
 /////////
 
+/////////
+
 const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
@@ -102,3 +104,40 @@ openSearch.addEventListener('click', () => {
         toggleSearcher();
     }
 });
+
+///
+
+const buttons = document.querySelectorAll('.look__search-button');
+const input = document.getElementById('search');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        input.value = button.textContent;
+    });
+});
+
+
+
+///////
+document.addEventListener("DOMContentLoaded", () => {
+    const trigger = document.getElementById("solution");
+    const parentItem = trigger.closest(".nav__list-item");
+    const dropdown = parentItem.querySelector(".nav__links");
+
+    trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle("open");
+    });
+
+
+    document.addEventListener("click", (e) => {
+        const isClickInside = parentItem.contains(e.target);
+
+        if (!isClickInside) {
+            dropdown.classList.remove("open");
+        }
+    });
+});
+
+
+

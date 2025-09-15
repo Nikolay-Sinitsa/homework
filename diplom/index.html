@@ -21,19 +21,36 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__list-item">
-              <a href="" class="nav__list-link">all products</a>
+              <a href="#shop" class="nav__list-link">all products</a>
             </li>
             <li class="nav__list-item">
-              <a href="" class="nav__list-link">Solutions</a>
-              <button class="nav__list-svg">
+              <a href="#" id="solution" class="nav__list-wrapper">
+                <span class="nav__list-link">Solutions</span>
                 <img src="./media/header/arrow.svg" alt="arrow" />
-              </button>
+              </a>
+              <ul class="nav__links">
+                <li class="nav__links-item">
+                  <a class="nav__links-link" href="#">Phone</a>
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__links-link" href="#">Watch</a>
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__links-link" href="#">Tablet</a>
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__links-link" href="#">Laptop</a>
+                </li>
+                <li class="nav__links-item">
+                  <a class="nav__links-link" href="#">Notebook</a>
+                </li>
+              </ul>
             </li>
             <li class="nav__list-item">
-              <a href="" class="nav__list-link">ABOUT</a>
+              <a href="#footer" class="nav__list-link">ABOUT</a>
             </li>
             <li class="nav__list-item">
-              <a href="" class="nav__list-link">support</a>
+              <a href="#footer" class="nav__list-link">support</a>
             </li>
           </ul>
         </nav>
@@ -145,13 +162,14 @@
       </div>
     </div>
 
-    <section class="store">
+    <section id="shop" class="store">
       <div class="container store__container">
         <div class="store__slider swiper">
           <div class="store__wrapper swiper-wrapper">
             <div class="store__slide swiper-slide">
               <div class="store__info">
                 <div class="store__info-wrapper">
+                  <img src="./media/sect-store/3-Iphone.png" alt="" />
                   <h1 class="store__info-title">
                     The new phones are here take a look.
                   </h1>
@@ -174,6 +192,7 @@
             <div class="store__slide swiper-slide">
               <div class="store__info">
                 <div class="store__info-wrapper">
+                  <img src="./media/sect-store/3-Iphone.png" alt="iphone" />
                   <h1 class="store__info-title">
                     The new phones are here take a look.
                   </h1>
@@ -196,6 +215,7 @@
             <div class="store__slide swiper-slide">
               <div class="store__info">
                 <div class="store__info-wrapper">
+                  <img src="./media/sect-store/3-Iphone.png" alt="iphone" />
                   <h1 class="store__info-title">
                     The new phones are here take a look.
                   </h1>
@@ -409,12 +429,11 @@
               </div>
             </div>
           </div>
-          <div class="ideas__link">
+          <button class="ideas__link">
             <p class="ideas__link-text">See All</p>
-            <a href="#" class="ideas__link-svg">
-              <img src="./media/sect-ideas/link.svg" alt="link" />
-            </a>
-          </div>
+
+            <img src="./media/sect-ideas/link.svg" alt="link" />
+          </button>
         </div>
       </div>
     </section>
@@ -478,9 +497,9 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__block">
-          <div class="footer__logo">
+          <button class="footer__logo">
             <img src="./media/footer/logo.svg" alt="logo" />
-          </div>
+          </button>
           <div class="footer__block-text">
             Sign up for texts to be notified about our best offers on the
             perfect gifts.
@@ -512,7 +531,7 @@
               ><a href="" class="footer__support-link">Contact</a>
             </div>
           </div>
-          <div class="footer__social">
+          <div id="footer" class="footer__social">
             <h6 class="footer__social-title">Follow Us</h6>
             <div class="footer__social-wrap">
               <a href="" class="footer__social-link">Instagram</a

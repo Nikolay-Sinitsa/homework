@@ -7,6 +7,12 @@
     padding: 20px 15px 20px;
     margin-bottom: 28px;
   }
+  &__logo {
+    &:hover {
+      transition: all 0.6s;
+      transform: scale(1.025);
+    }
+  }
 
   &__icon {
     display: flex;
@@ -221,6 +227,21 @@
   visibility: hidden;
   transform: translateY(-20px);
   transition: all 0.4s ease;
+  &::before {
+    z-index: -1;
+    opacity: 0.1;
+    height: 10vh;
+    width: 100%;
+    content: "";
+    position: absolute;
+    /* width: 25px; */
+    /* height: 2px; */
+    background-color: #fffffff2;
+    border-radius: 2px;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
 
   &.active {
     opacity: 1;
@@ -233,6 +254,8 @@
   }
 
   &__search {
+    align-items: center;
+    display: flex;
     margin-bottom: 21px;
 
     img {
@@ -270,11 +293,13 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
+    max-width: 300px;
 
     &-item {
       display: flex;
       align-items: center;
       transition: all 0.6s;
+      max-width: 300px;
 
       img {
         width: 40px;
@@ -283,7 +308,7 @@
       &:hover {
         animation: none;
         transform: scale(1.04);
-        transition: all 0.6s;
+        transition: all 0.4s;
       }
     }
 
@@ -309,15 +334,19 @@
       align-items: center;
       background: transparent;
     }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+    }
     &-item {
       &:nth-child(1) {
         margin-right: 33px;
       }
       &:nth-child(2) {
-        display: flex;
-        align-items: center;
-        gap: 3px;
         margin-right: 34px;
+        position: relative;
       }
       &:nth-child(3) {
         margin-right: 44px;
@@ -330,6 +359,46 @@
       line-height: 1.2;
       text-transform: uppercase;
       color: #000;
+    }
+  }
+  &__links {
+    border-radius: 4px;
+    box-shadow: -6px 4px 8px 6px rgba(34, 60, 80, 0.2);
+    padding: 7px;
+    background: #dce5e2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 26px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &.open {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    &-link {
+      font-family: var(--second-family);
+      font-weight: 300;
+      font-size: 16px;
+      text-align: center;
+      color: #000;
+    }
+    &-item {
+      &:hover {
+        scale: 1.02;
+        transition: all 0.3s;
+      }
     }
   }
 }
@@ -375,6 +444,14 @@
     display: flex;
     align-items: center;
     max-width: 588px;
+    &-wrapper {
+      img {
+        margin: 0 0 10px;
+        border-bottom: 1px solid rgb(96, 94, 92);
+        width: 100%;
+        display: none;
+      }
+    }
     &-title {
       font-family: var(--second-family);
       font-weight: 400;
@@ -392,9 +469,8 @@
       color: #000;
     }
     &-button {
-      max-width: 100%;
-
-      z-index: 2;
+      // max-width: 100%;
+      // z-index: 2;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -799,6 +875,11 @@
     text-transform: capitalize;
     text-align: center;
     color: #000;
+    &:hover {
+      box-shadow: 1px 6px 8px 6px rgba(34, 60, 80, 0.14);
+      transform: scale(1.04);
+      transition: all 0.6s;
+    }
   }
 }
 
@@ -858,6 +939,13 @@
     display: flex;
     justify-content: center;
     align-self: start;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 auto;
+    &:hover {
+      transition: all 0.6s;
+      transform: scale(1.025);
+    }
     &-text {
       font-family: var(--font-family);
       font-weight: 400;
@@ -945,6 +1033,11 @@
       border: 1px solid #c5c5c5;
       border-radius: 200px;
       padding: 12px 0 13px;
+      &:hover {
+        box-shadow: 1px 6px 8px 6px rgba(34, 60, 80, 0.14);
+        animation: none;
+        transition: all 0.6s;
+      }
       &:nth-child(1) {
         max-width: 90px;
       }
@@ -1052,6 +1145,10 @@
       border-radius: 0 200px 200px 0;
       max-width: 115px;
       width: 100%;
+      &:hover {
+        transition: all 0.6s;
+        background: #0000009f;
+      }
     }
   }
 }
@@ -1068,6 +1165,12 @@
   }
   &__logo {
     margin-bottom: 18px;
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+      transition: all 0.6s;
+      transform: scale(1.025);
+    }
   }
   &__block {
     max-width: 304px;
@@ -1114,6 +1217,10 @@
       font-size: 17px;
       line-height: 127%;
       color: #000;
+      &:hover {
+        transition: all 0.6s;
+        transform: scale(1.025);
+      }
     }
   }
   &__company {
@@ -1136,6 +1243,10 @@
       font-size: 17px;
       line-height: 127%;
       color: #000;
+      &:hover {
+        transition: all 0.6s;
+        transform: scale(1.025);
+      }
     }
   }
   &__support {
@@ -1158,6 +1269,11 @@
       font-size: 17px;
       line-height: 127%;
       color: #000;
+      transition: all 0.6s;
+      &:hover {
+        transition: all 0.6s;
+        transform: scale(1.025);
+      }
     }
   }
   &__social {
@@ -1183,6 +1299,10 @@
       font-size: 17px;
       line-height: 127%;
       color: #000;
+      &:hover {
+        transition: all 0.6s;
+        transform: scale(1.025);
+      }
     }
   }
   &__line {
@@ -1200,6 +1320,10 @@
     display: flex;
     align-items: center;
     background: transparent;
+    &:hover {
+      transition: all 0.6s;
+      transform: scale(1.025);
+    }
     &-bold {
       font-family: var(--second-family);
       font-weight: 400;
@@ -1306,6 +1430,15 @@
     &-text {
       @media (max-width: 1012px) {
         font-size: 14px;
+      }
+    }
+    &-wrapper {
+      @media (max-width: 655px) {
+      }
+      img {
+        @media (max-width: 655px) {
+          display: block;
+        }
       }
     }
 
@@ -1747,9 +1880,7 @@
   &__wrap {
     @media (max-width: 523px) {
       flex-direction: column;
-      gap: 7px;
+      gap: 6px;
     }
   }
 }
-
-//////////
